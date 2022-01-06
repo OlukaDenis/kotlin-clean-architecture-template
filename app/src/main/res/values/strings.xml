@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mcash</string>
+    <string name="who_to_follow">Who to follow</string>
+    <string name="trending_meals">Trending Meals</string>
+    <string name="trends_for_you">Trends for you</string>
+    <string name="trending_events">Trending Events</string>
+    <string name="see_more">See more</string>
+    <string name="follow">Follow</string>
+</resources>

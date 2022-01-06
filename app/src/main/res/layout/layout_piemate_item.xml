@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/spacing_8"
+    app:cardElevation="@dimen/spacing_0"
+    android:layout_margin="@dimen/spacing_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/civProfilePic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_150"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/sample_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/civProfilePic"
+            android:padding="@dimen/spacing_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                tools:text="Denis Oluka"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvFollowerCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="20 piemates"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mtvProfileName"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8"
+                style="@style/OutlinedButton"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginEnd="@dimen/spacing_8"
+                android:layout_marginStart="@dimen/spacing_8"
+                app:layout_constraintTop_toBottomOf="@id/mtvFollowerCount"
+                app:layout_constraintStart_toStartOf="parent"
+                android:minWidth="@dimen/spacing_0"
+                android:minHeight="@dimen/spacing_0"
+                android:text="@string/follow"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_star.xml" value="0.1546875" />
+        <entry key="app/src/main/res/drawable/ic_placeholder.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/drawable/pieme_btn_bg.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/drawable/pieme_outlined_btn_bg.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/drawable/success_bg.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/drawable/warning_bg.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/layout_follow_piemate_item.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/layout_hashtag_item.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/layout_piemate_item.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/layout_post_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/layout_trending_event_item.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/layout_trending_hashtag_item.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/layout_trending_meal_item.xml" value="0.5" />
+        <entry key="app/src/main/res/xml/networ_security_config.xml" value="0.1793478260869565" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

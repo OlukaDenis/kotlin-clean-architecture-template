@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/spacing_8">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/civpimg"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        app:srcCompat="@drawable/ic_person"
+        android:tint="@color/gray_text"
+        app:tint="@color/gray_text"
+        app:layout_constraintStart_toEndOf="@+id/sivPieImage"
+        app:layout_constraintTop_toTopOf="@id/mtvPieName"
+        app:layout_constraintBottom_toBottomOf="@id/mtvPieName"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintStart_toEndOf="@id/civpimg"
+        app:layout_constraintTop_toTopOf="@id/civpimg"
+        app:layout_constraintBottom_toBottomOf="@id/civpimg"
+        tools:text="denny"
+        android:textColor="@color/gray_text"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sivPieImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView"
+       app:layout_constraintTop_toBottomOf="@id/civpimg"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvPieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/sivPieImage"
+        app:layout_constraintTop_toTopOf="@id/sivPieImage"
+        android:layout_marginStart="@dimen/spacing_8"
+        tools:text="Denis Oluka"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/civVerified"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        app:srcCompat="@drawable/ic_check_circle"
+        app:tint="?colorPrimary"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/spacing_8"
+        app:layout_constraintStart_toEndOf="@+id/mtvPieName"
+        app:layout_constraintTop_toTopOf="@id/mtvPieName"
+        app:layout_constraintBottom_toBottomOf="@id/mtvPieName"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvPieHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/mtvPieName"
+        app:layout_constraintTop_toBottomOf="@id/mtvPieName"
+        tools:text="denny"
+        android:textColor="@color/gray_text"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvPieDesc"
+        android:layout_width="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/mtvPieName"
+        app:layout_constraintTop_toBottomOf="@id/mtvPieHandle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="3"
+        android:ellipsize="end"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam magna, consectetur sed convallis eget, vehicula et ipsum. Proin viverra turpis tincidunt, gravida lorem convallis, porta enim. Nunc dapibus finibus gravida. Vestibulum vitae efficitur ante, at gravida tellus. Sed vitae lorem in sapien semper aliquam. Phasellus tincidunt pulvinar ullamcorper. "/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/OutlinedButton"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:minWidth="@dimen/spacing_0"
+        android:minHeight="@dimen/spacing_0"
+        android:text="@string/follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mtvPieName"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_bg"
+        android:layout_marginTop="@dimen/spacing_5"
+        app:layout_constraintTop_toBottomOf="@id/mtvPieDesc"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

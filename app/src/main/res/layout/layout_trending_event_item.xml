@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/spacing_8"
+    android:layout_marginTop="@dimen/spacing_8">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMilImage"
+        android:layout_width="@dimen/spacing_100"
+        android:layout_height="@dimen/spacing_100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/spacing_5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sivEventImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/ic_placeholder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvEventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@id/cardMilImage"
+        app:layout_constraintTop_toTopOf="@id/cardMilImage"
+        android:layout_marginStart="@dimen/default_spacing"
+        android:textSize="@dimen/font_17"
+        tools:text="Silent disco"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvEventDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/mtvEventName"
+        app:layout_constraintTop_toBottomOf="@id/mtvEventName"
+        android:textSize="@dimen/font_14"
+        tools:text="Fri Nov 2021 - 5:00 PM"
+        android:textColor="@color/gray_text"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvEventVenue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/mtvEventName"
+        app:layout_constraintTop_toBottomOf="@id/mtvEventDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/font_14"
+        tools:text="Garden City Kampala"
+        android:textColor="@color/gray_text"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvEventType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/mtvEventName"
+        app:layout_constraintTop_toBottomOf="@id/mtvEventVenue"
+        android:layout_marginTop="@dimen/default_spacing"
+        android:textSize="@dimen/default_size"
+        tools:text="Private event ."
+        android:textColor="?colorPrimary"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvEventMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/mtvEventType"
+        app:layout_constraintTop_toTopOf="@id/mtvEventType"
+        android:textSize="@dimen/default_size"
+        tools:text="120 members left"
+        android:textColor="@color/danger"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardMilImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/spacing_5">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivUserImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/default_spacing"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/sivUserImage"
+            app:layout_constraintTop_toTopOf="@id/sivUserImage"
+            android:layout_marginStart="@dimen/spacing_8"
+            tools:text="Denis Oluka"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvUserHandle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/mtvUserName"
+            app:layout_constraintTop_toBottomOf="@id/mtvUserName"
+            tools:text="denny"
+            android:textColor="@color/gray_text"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEventPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OutlinedButton"
+            android:minWidth="@dimen/spacing_0"
+            android:minHeight="@dimen/spacing_0"
+            android:paddingStart="@dimen/spacing_20"
+            android:paddingEnd="@dimen/spacing_20"
+            android:paddingTop="@dimen/spacing_8"
+            android:paddingBottom="@dimen/spacing_8"
+            android:layout_marginEnd="@dimen/spacing_8"
+            tools:text="$10.50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sivUserImage"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_bg"
+        app:layout_constraintTop_toBottomOf="@+id/clUser"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
